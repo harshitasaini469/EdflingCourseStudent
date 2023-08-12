@@ -6,7 +6,7 @@ const About = () => {
       <div class="row lg:g-5 mx-lg-5">
         <div class="col-md-5 me-md-5">
           <img
-            src="./about/about-us.png"
+            src="./desktop18/about/about-us.png"
             class="img-fluid w-full h-full"
             alt="..."
           />

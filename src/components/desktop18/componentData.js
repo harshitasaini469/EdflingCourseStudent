@@ -1,6 +1,6 @@
 const componentData = [{
         id: 1,
-        image: "./mentors/smith.png",
+        image: "./desktop18/mentors/smith.png",
         name: "Smith Thakkar",
         profile: "Senior Designer at Apple",
         experience: "10+ years of experience in UI/UX Design Ex-Google, Ex-Flipkart",
@@ -10,7 +10,7 @@ const componentData = [{
     },
     {
         id: 1,
-        image: "./mentors/rohan.png",
+        image: "./desktop18/mentors/rohan.png",
         name: "Rohan Patel",
         profile: "Senior Designer at Apple",
         experience: "25+ years of experience in SEO & Networking EX-Google",
@@ -20,7 +20,7 @@ const componentData = [{
     },
     {
         id: 1,
-        image: "./mentors/karan.png",
+        image: "./desktop18/mentors/karan.png",
         name: "Karan Jariwala",
         profile: "Senior Designer at Apple",
         experience: "8+ years of experience in UI/UX Design Ex-Google, Ex-Flipkart",
@@ -30,7 +30,7 @@ const componentData = [{
     },
     {
         id: 1,
-        image: "./mentors/krishna.png",
+        image: "./desktop18/mentors/krishna.png",
         name: "Krishna",
         profile: "Senior Designer at Apple",
         experience: "9+ years of experience in UI/UX Design Ex-Google, Ex-Flipkart",
