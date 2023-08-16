@@ -49,16 +49,17 @@ const Sidebar = () => {
         }`}
         aria-label="Sidebar"
       >
-        <div class="relative h-full overflow-y-scroll no-scrollbar bg-teal-900">
+        <div class="relative flex flex-col justify-between  h-full overflow-y-scroll no-scrollbar bg-teal-900 font-poppins">
+          <div>
           <div className="w-32 h-20 relative px-3 py-4 ">
             <img src="/desktop57to61/Ellipse.png" alt="" />
             <div className="absolute top-10 px-2">
-              <p className="self-center  text-xl font-semibold whitespace-nowrap text-white font-poppins">
+              <p className="self-center  text-xl font-semibold whitespace-nowrap text-white ">
                 My Classroom
               </p>
             </div>
           </div>
-          <ul className="space-y-1 font-poppins px-3 py-4  ">
+          <ul className="space-y-1 px-3 py-4  ">
             <li className="">
               <button
                 class="flex items-center p-2 w-full text-white rounded-lg hover:bg-gray-100/50 transition duration-75 relative "
@@ -285,11 +286,13 @@ const Sidebar = () => {
               </a>
             </li>
           </ul>
+          </div>
+          
           
           <img
             src="./desktop57to61/blobs.png"
             alt="blob"
-            className="h-1/5 w-full mt-5"
+            className="h-1/5 w-full hidden sm:block"
 
           />
         </div>

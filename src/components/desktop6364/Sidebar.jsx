@@ -39,16 +39,17 @@ const Sidebar = () => {
         }`}
         aria-label="Sidebar"
       >
-        <div class="h-full  overflow-y-auto no-scrollbar bg-teal-900 text-sm">
+        <div class="h-full flex flex-col justify-between overflow-y-auto no-scrollbar bg-teal-900 text-sm font-poppins">
+          <div>
           <div className="w-32 h-20 relative px-3 py-4">
             <img src="/desktop6364/Ellipse.png" alt="" />
             <div className="absolute top-10 px-2">
-              <p className="self-center  text-xl font-semibold whitespace-nowrap text-white font-poppins">
+              <p className="self-center  text-xl font-semibold whitespace-nowrap text-white ">
                 My Classroom
               </p>
             </div>
           </div>
-          <ul className="space-y-1 text-base px-3 py-4 font-poppins">
+          <ul className="space-y-1 text-base px-3 py-4">
             <li>
               <a
                 href="#"
@@ -222,7 +223,9 @@ const Sidebar = () => {
               </a>
             </li>
           </ul>
-            <img src="./desktop6364/blobs.png" alt="blob" className=" h-1/5 w-full mt-5"/>
+          </div>
+         
+            <img src="./desktop6364/blobs.png" alt="blob" className="h-1/5 w-full hidden sm:block"/>
         </div>
       </aside>
     </>
