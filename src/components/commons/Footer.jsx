@@ -6,8 +6,8 @@ export default function Footer() {
      
       <div className="footer-cont w-full flex flex-col justify-center items-center pt-5  space-y-2 md:space-y-4 opacity-90">
         {/* logo */}
-        <div>
-        <svg
+        <div >
+          <div className="flex items-center"><svg
             width="68"
             height="43"
             viewBox="0 0 68 43"
@@ -39,12 +39,14 @@ export default function Footer() {
               fill="#CB8461"
             />
           </svg>
-          <div className="text-xs text-end mt-2 opacity-50 success">
+          <span className="text-teal-800 text-xl font-semibold">Edfling courses</span></div>
+        
+          <div className="text-xs text-end -mt-2 opacity-50 success">
             Success is here!!!
           </div>
         </div>
         {/* middle */}
-        <div className="middle py-5 flex flex-wrap md:flex-nowrap w-4/5 items-center justify-evenly md:justify-between gap-y-8 gap-x-14">
+        <div className="middle py-5 flex flex-col sm:flex-row flex-wrap md:flex-nowrap w-4/5 items-center justify-evenly md:justify-between gap-y-8 gap-x-14">
           <ul className="gap-3 flex flex-col items-left">
             <li className="heading text-left py-1
             ">About</li>
