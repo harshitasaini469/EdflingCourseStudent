@@ -49,7 +49,7 @@ const Sidebar = () => {
         }`}
         aria-label="Sidebar"
       >
-        <div class="relative h-full flex flex-col justify-between overflow-y-scroll no-scrollbar bg-teal-900 font-poppins">
+        <div class="relative h-full flex flex-col justify-between overflow-y-scroll no-scrollbar bg-teal-800 font-poppins">
             <div>
             <div className="w-32 h-20 relative px-3 py-4 ">
             <img src="/desktop57to61/Ellipse.png" alt="" />

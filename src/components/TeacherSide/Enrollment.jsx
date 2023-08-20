@@ -11,47 +11,44 @@ const Enrollment = () => {
       price: "Rs. 599/-",
     },
     {
-      img: "/TeacherSide/python.png",
+      img: "/TeacherSide/code.png",
       course: "Python course for beginners",
       duration: "Duration 1 to 2 months",
       price: "Rs. 599/-",
     },
     {
-      img: "/TeacherSide/python.png",
+      img: "/TeacherSide/code.png",
       course: "Python course for beginners",
       duration: "Duration 1 to 2 months",
       price: "Rs. 599/-",
     },
     {
-      img: "/TeacherSide/python.png",
+      img: "/TeacherSide/businessAnalytics.png",
       course: "Python course for beginners",
       duration: "Duration 1 to 2 months",
       price: "Rs. 599/-",
     },
     {
-      img: "/TeacherSide/python.png",
+      img: "/TeacherSide/businessAnalytics.png",
       course: "Python course for beginners",
       duration: "Duration 1 to 2 months",
       price: "Rs. 599/-",
     },
     {
-      img: "/TeacherSide/python.png",
+      img: "/TeacherSide/dataAnalysis.png",
       course: "Python course for beginners",
       duration: "Duration 1 to 2 months",
       price: "Rs. 599/-",
     },
   ];
   return (
-    <div>
-      <Sidebar />
-      <div className="p-3 sm:ml-64 space-y-4 ">
-        <Nav />
-        <div className="flex flex-col space-y-2">
-          <div>
+    <div className="font-poppins ml-4">
+        <div className="flex flex-col space-y-4 ">
+          <div className="text-teal-800 font-semibold text-5xl mt-3">
             <p>Course Enrollment</p>
           </div>
-          <div className="bg-teal-800 rounded-md p-4 ">
-            <div className="flex space-x-2 border bg-white rounded-md py-1 px-4 w-4/5 mx-auto">
+          <div className="bg-teal-800 flex flex-col justify-between rounded-md p-4 justify-center space-y-6 ">
+            <div className="flex space-x-2 border bg-white rounded-md py-1 px-4 w-3/5 ">
               <svg
                 width="30"
                 height="30"
@@ -71,21 +68,38 @@ const Enrollment = () => {
                 placeholder="search student name"
               />
             </div>
-            <div className="flex flex-wrap gap-4 mx-auto border">
-                {courses.map((course)=>(<div className="border rounded-md bg-white w-1/4">
-                <img src={course.img} alt="" />
-                <div className="">
-                  <p>{course.course}</p>
-                  <p>{course.duration}</p>
-                  <p>{course.price}</p>
+            <div className="flex flex-wrap gap-5">
+              {courses.map((course) => (
+                <div className="border rounded-lg bg-white w-1/4.5  p-2">
+                  <img src={course.img} alt="" />
+                  <div className="p-2 font-semibold">
+                    <p>{course.course}</p>
+                    <p>{course.duration}</p>
+                    <p>{course.price}</p>
+                  </div>
                 </div>
-              </div>))}
-              
+              ))}
+            </div>
+            <div className="text-white flex mx-auto mt-5">
+              <span>Load More</span>
+              <svg
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="self-end"
+              >
+                <path
+                  d="M4.5159 7.96967C4.78493 7.7034 5.20592 7.6792 5.50259 7.89705L5.58758 7.96967L12.1245 14.439L18.6614 7.96967C18.9304 7.7034 19.3514 7.6792 19.648 7.89705L19.733 7.96967C20.0021 8.23594 20.0265 8.6526 19.8064 8.94621L19.733 9.03033L12.6603 16.0303C12.3913 16.2966 11.9703 16.3208 11.6736 16.1029L11.5886 16.0303L4.5159 9.03033C4.21996 8.73744 4.21996 8.26256 4.5159 7.96967Z"
+                  fill="white"
+                />
+              </svg>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

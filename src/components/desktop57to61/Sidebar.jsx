@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -15,9 +15,9 @@ const Sidebar = () => {
     { length: 10 },
     (_, index) => `Lesson #{index + 1}`
   );
-
+ 
   return (
-    <div className="relative">
+    <div className=" relative h-screen">
       <button
         data-drawer-target="default-sidebar"
         data-drawer-toggle="default-sidebar"
@@ -44,12 +44,12 @@ const Sidebar = () => {
 
       <aside
         id="default-sidebar"
-        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full sm:translate-x-0"
-        }`}
+        className={`absolute top-0 left-0 h-screen sm:w-64 transition-transform ${
+          isSidebarOpen ? "translate-x-0 " : "-translate-x-full  sm:translate-x-0 "
+        } sm:translate-x-0 duration-300 ease-in-out sidebar`}
         aria-label="Sidebar"
       >
-        <div class="relative flex flex-col justify-between  h-full overflow-y-scroll no-scrollbar bg-teal-900 font-poppins">
+        <div class="h-full flex flex-col justify-between h-full overflow-y-scroll no-scrollbar bg-teal-900 font-poppins">
           <div>
           <div className="w-32 h-20 relative px-3 py-4 ">
             <img src="/desktop57to61/Ellipse.png" alt="" />

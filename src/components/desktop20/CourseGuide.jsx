@@ -56,8 +56,8 @@ const CourseGuide = () => {
     },
   ];
   return (
-    <div className="container lg:w-[90vw] w-screen mt-5 mx-auto mb-3 ">
-      <div className="max-sm:w-screen mx-auto bg-cover bg-no-repeat bg-top py-16 lg:px-3 lg:py-28 px-2 mb-5" style={{
+    <div className="w-[90vw] mt-3 sm:mx-auto mb-3 ">
+      <div className="max-sm:w-screen mx-auto bg-cover bg-no-repeat bg-top py-16 lg:px-3 lg:py-32 px-2 mb-5" style={{
       backgroundImage: 'url("./desktop20/courseGuideBg.png")' ,height:'fit'
     }}>
       <div className="flex flex-col max-w-screen-xl mx-auto ">

@@ -7,9 +7,9 @@ import LikeDislikeComment from "./LikeDislikeComment";
 import Comments from "./Comments";
 const Courses = () => {
   return (
-    <div>
+    <div className='flex'>
       <Sidebar />
-      <div className="p-3 sm:ml-64 space-y-4 ">
+      <div className="p-3 sm:ml-64 space-y-6 h-[100vh] overflow-y-scroll no-scrollbar">
         <CoursesNav />
         <EmbeddedVideo />
         <Transcript />

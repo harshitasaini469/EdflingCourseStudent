@@ -2,8 +2,8 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <div className="bg-teal-800 py-2 px-3 rounded-md text-white font-poppins">
-      <div className="flex flex-col lg:flex-row justify-between text-sm space-y-1 lg:space-y-0 items-center">
+    <div className="bg-teal-800 py-2 px-4  text-white font-poppins shadow-md shadow-black/50">
+      <div className="flex flex-col lg:flex-row justify-between text-sm space-y-1 p-1 lg:space-y-0 items-center">
         <div>
           <p className="text-white font-semibold text-xl">Course's</p>
         </div>

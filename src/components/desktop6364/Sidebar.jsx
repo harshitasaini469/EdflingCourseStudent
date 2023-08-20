@@ -7,15 +7,15 @@ const Sidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
   return (
-    <>
+    <div className="relative ">
       <button
-        data-drawer-target="default-sidebar"
-        data-drawer-toggle="default-sidebar"
-        aria-controls="default-sidebar"
-        type="button"
-        class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-slate-50 hover:bg-opacity-25 focus:outline-none focus:ring-2 focus:ring-gray-200 "
-        onClick={handleSidebarToggle}
-      >
+    data-drawer-target="default-sidebar"
+    data-drawer-toggle="default-sidebar"
+    aria-controls="default-sidebar"
+    type="button"
+    class="inline-flex items-center p-2 mt-2 ml-3  text-sm text-gray-500 rounded-lg sm:hidden hover:bg-slate-50 hover:bg-opacity-25 focus:outline-none focus:ring-2 focus:ring-gray-200"
+    onClick={handleSidebarToggle}
+  >
         <span class="sr-only">Open sidebar</span>
         <svg
           class="w-6 h-6"
@@ -34,9 +34,9 @@ const Sidebar = () => {
 
       <aside
         id="default-sidebar"
-        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full sm:translate-x-0"
-        }`}
+        className={`absolute top-0 left-0 h-screen sm:w-64 transition-transform ${
+          isSidebarOpen ? "translate-x-0 " : "-translate-x-full  "
+        } sm:translate-x-0 duration-300 ease-in-out`}
         aria-label="Sidebar"
       >
         <div class="h-full flex flex-col justify-between overflow-y-auto no-scrollbar bg-teal-900 text-sm font-poppins">
@@ -228,7 +228,7 @@ const Sidebar = () => {
             <img src="./desktop6364/blobs.png" alt="blob" className="h-1/5 w-full hidden sm:block"/>
         </div>
       </aside>
-    </>
+    </div>
   );
 };
 

@@ -5,9 +5,14 @@ import Page57 from "./pages/page57";
 import Page6364 from "./pages/Page6364";
 import FormSubmittedSuccessfully from "./components/FormSubmittedFrame/FormSubmittedSuccessfully";
 import Enrollment from "./components/TeacherSide/Enrollment";
+import Chats from "./components/TeacherSide/Chats";
+import TeacherSide from "./components/TeacherSide/TeacherSide";
+import Header from "./components/commons/Header";
+import Footer from "./components/commons/Footer";
 function App() {
   return (
     <div className="App">
+      <Header/> 
       <Router>
         <Routes>
           <Route exact path="/" element={<Page20 />}></Route>
@@ -16,7 +21,8 @@ function App() {
           <Route exact path="/63" element={<Page6364 />}></Route>
         </Routes>
       </Router>
-      {/* <Enrollment/> */}
+      <Footer/>
+      {/* <TeacherSide/> */}
       {/* <FormSubmittedSuccessfully/> */}
     </div>
   );
