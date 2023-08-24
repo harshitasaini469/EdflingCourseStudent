@@ -5,11 +5,13 @@ import EmbeddedVideo from "./EmbeddedVideo";
 import Transcript from "./Transcript";
 import LikeDislikeComment from "./LikeDislikeComment";
 import Comments from "./Comments";
-const Courses = () => {
+import { connect } from 'react-redux';
+
+const Courses = ({ isSidebarOpen }) => {
   return (
     <div className='flex'>
-      <Sidebar />
-      <div className="p-3 sm:ml-64 space-y-6 h-[100vh] overflow-y-scroll no-scrollbar">
+      <Sidebar isSidebarOpen={isSidebarOpen} />
+      <div className="p-3 md:ml-64 space-y-6 h-[100vh] overflow-y-scroll no-scrollbar">
         <CoursesNav />
         <EmbeddedVideo />
         <Transcript />
@@ -26,4 +28,9 @@ const Courses = () => {
   )
 }
 
-export default Courses
+const mapStateToProps = (state) => ({
+  isSidebarOpen: state.sidebar.isSidebarOpen,
+});
+
+export default connect(mapStateToProps)(Courses);
+

@@ -4,11 +4,13 @@ import ToggleButton from "./ToggleButton";
 import Pagination from "./Pagination";
 import Sidebar from "./Sidebar";
 import Doubts from './Doubts';
-const AskDoubtPage = () => {
+import { connect } from 'react-redux';
+
+const AskDoubtPage = ({ isSidebarOpen }) => {
   return (
     <div className='flex'>
-       <Sidebar />
-      <div className="p-3 sm:ml-64 space-y-6 h-[100vh] overflow-y-scroll no-scrollbar">
+       <Sidebar isSidebarOpen={isSidebarOpen} />
+      <div className="p-3 md:ml-64 space-y-6 h-[100vh] overflow-y-scroll no-scrollbar">
         <AskDoubtsBanner />
         <ToggleButton />
         <Pagination />
@@ -17,5 +19,9 @@ const AskDoubtPage = () => {
     </div>
   )
 }
+const mapStateToProps = (state) => ({
+  isSidebarOpen: state.sidebar.isSidebarOpen,
+});
 
-export default AskDoubtPage
+export default connect(mapStateToProps)(AskDoubtPage);
+

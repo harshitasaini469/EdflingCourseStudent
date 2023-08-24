@@ -44,14 +44,13 @@ const Enrollment = () => {
   return (
     <div className="font-poppins ml-4">
         <div className="flex flex-col space-y-4 ">
-          <div className="text-teal-800 font-semibold text-5xl mt-3">
+          <div className="text-teal-800 font-semibold text-2xl md:text-3xl lg:text-5xl mt-3">
             <p>Course Enrollment</p>
           </div>
           <div className="bg-teal-800 flex flex-col justify-between rounded-md p-4 justify-center space-y-6 ">
-            <div className="flex space-x-2 border bg-white rounded-md py-1 px-4 w-3/5 ">
+            <div className="flex items-center space-x-2 border bg-white rounded-md py-1 px-2 lg:px-4  sm:w-4/5 lg:w-3/5 ">
               <svg
-                width="30"
-                height="30"
+                className="w-5 h-5 sm:w-7 sm:h-7"
                 viewBox="0 0 30 30"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,15 +63,15 @@ const Enrollment = () => {
 
               <input
                 type="text"
-                className="bg-transparent rounded-md px-2 py-1 focus:outline-none "
+                className="bg-transparent rounded-md px-2 py-1 focus:outline-none text-sm sm:text-base "
                 placeholder="search student name"
               />
             </div>
-            <div className="flex flex-wrap gap-5">
+            <div className="flex items-center justify-center flex-wrap gap-4">
               {courses.map((course) => (
-                <div className="border rounded-lg bg-white w-1/4.5  p-2">
+                <div className="border rounded-lg bg-white w-fit  p-2">
                   <img src={course.img} alt="" />
-                  <div className="p-2 font-semibold">
+                  <div className="p-2 text-sm sm:text-base font-semibold">
                     <p>{course.course}</p>
                     <p>{course.duration}</p>
                     <p>{course.price}</p>
@@ -83,6 +82,7 @@ const Enrollment = () => {
             <div className="text-white flex mx-auto mt-5">
               <span>Load More</span>
               <svg
+
                 width="25"
                 height="24"
                 viewBox="0 0 25 24"

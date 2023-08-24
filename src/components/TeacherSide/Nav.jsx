@@ -2,16 +2,17 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <div className="bg-teal-800 py-2 px-4  text-white font-poppins shadow-md shadow-black/50">
-      <div className="flex flex-col lg:flex-row justify-between text-sm space-y-1 p-1 lg:space-y-0 items-center">
+    <div className="bg-teal-800 py-2 px-1 sm:px-4  text-white font-poppins shadow-md shadow-black/50 ">
+      <div className="flex flex-row justify-between space-y-1 p-1 lg:space-y-0 items-center">
         <div>
-          <p className="text-white font-semibold text-xl">Course's</p>
+          <p className="text-white font-medium text-sm  sm:text-lg lg:text-xl">
+            Course's
+          </p>
         </div>
-        <div className="flex  space-x-6 items-center">
-          <div className="flex space-x-2 border border-gray-300 rounded-md py-1 px-4 w-full ">
+        <div className="flex space-x-1 sm:space-x-4 lg:space-x-6 items-center">
+          <div className="flex space-x-2 border border-gray-300 rounded-md md:py-1 px-1 md:px-4 w-full ">
             <svg
-              width="39"
-              height="27"
+              className="w-6 h-6 md:w-8 md:h-8"
               viewBox="0 0 39 27"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -27,14 +28,13 @@ const Nav = () => {
             </svg>
             <input
               type="text"
-              className="bg-transparent focus:outline-none"
+              className="bg-transparent focus:outline-none text-xs md:text-sm"
               placeholder="search student name"
             />
           </div>
           <div>
             <svg
-              width="30"
-              height="35"
+              className="w-6 h-6 md:w-8 md:h-8"
               viewBox="0 0 30 35"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -56,14 +56,12 @@ const Nav = () => {
             </svg>
           </div>
           <div className="flex items-center space-x-1">
-            <div className="border rounded-full w-9 h-9 bg-gray-300"></div>
+            <div className="border rounded-full w-6 h-6 md:w-7 md:h-7 bg-gray-300"></div>
             <svg
-              width="25"
-              height="24"
               viewBox="0 0 25 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="self-end"
+              className="w-4 h-4 md:w-7 md:h-7 self-end"
             >
               <path
                 d="M4.5159 7.96967C4.78493 7.7034 5.20592 7.6792 5.50259 7.89705L5.58758 7.96967L12.1245 14.439L18.6614 7.96967C18.9304 7.7034 19.3514 7.6792 19.648 7.89705L19.733 7.96967C20.0021 8.23594 20.0265 8.6526 19.8064 8.94621L19.733 9.03033L12.6603 16.0303C12.3913 16.2966 11.9703 16.3208 11.6736 16.1029L11.5886 16.0303L4.5159 9.03033C4.21996 8.73744 4.21996 8.26256 4.5159 7.96967Z"

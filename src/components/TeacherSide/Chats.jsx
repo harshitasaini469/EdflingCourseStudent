@@ -3,15 +3,14 @@ import React from "react";
 const Chats = () => {
   return (
     <div className="font-poppins">
-      <div className="text-5xl text-teal-700 font-semibold mt-4 space-y-8">
+      <div className=" text-2xl md:text-3xl lg:text-5xl text-teal-700 font-semibold mt-4 space-y-2 md:space-y-5">
         <p>Teach Chats</p>
         <hr />
       </div>
-      <div className="p-5 flex flex-col space-y-8 mt-3 ">
-        <div className="flex space-x-2 border bg-white rounded-xl py-1 px-4 w-3/5 border-2 ">
+      <div className="p-5 flex flex-col space-y-8  ">
+        <div className="flex items-center sm:space-x-2 border border-2 bg-white rounded-xl py-1 px-2 sm:px-3 md:px-4 md:w-3/5">
           <svg
-            width="30"
-            height="30"
+            className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8"
             viewBox="0 0 30 30"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -24,45 +23,45 @@ const Chats = () => {
 
           <input
             type="text"
-            className="bg-transparent rounded-md px-2 py-1 focus:outline-none "
-            placeholder="search student name"
+            className="bg-transparent rounded-md px-2 py-1 focus:outline-none text-xs sm:text-sm md:text-base"
+            placeholder="Search student name"
           />
         </div>
+
         <div className="flex gap-5 flex-wrap justify-center items-center">
-          <div className="w-1/4 p-5 box-content active:border-2 active:rounded-md active:border-teal-800">
-            <div className="h-72 border rounded-md flex justify-center items-center text-center text-2xl font-semibold bg-gradient-to-r from-emerald-700  to-emerald-100">
-              <p> Group Chat</p>
+          <div className="w-full sm:w-1/2 md:w-1/3 p-3 sm:p-4 md:p-5 box-content active:border-2 active:rounded-md active:border-teal-800">
+            <div className="h-40 sm:h-48 md:h-56 lg:h-72 md:px-2  border rounded-md flex justify-center items-center text-center text-lg sm:text-xl md:text-lg lg:text-3xl font-semibold bg-gradient-to-r from-emerald-700 to-emerald-100">
+              <p>Group Chat</p>
             </div>
           </div>
-          <div className="w-1/4 p-5  box-content active:border-2 active:rounded-md active:border-teal-800	 ">
-            <div className="h-72 border rounded-md flex justify-center items-center text-center text-2xl font-semibold bg-gradient-to-r from-emerald-700  to-emerald-100">
-              <p> Discussion Forums</p>
+          <div className="w-full sm:w-1/2 md:w-1/3  p-3 sm:p-4 md:p-5 box-content active:border-2 active:rounded-md active:border-teal-800">
+            <div className="h-40 sm:h-48 md:h-56 lg:h-72 md:px-2 border rounded-md flex justify-center items-center text-center text-lg sm:text-xl md:text-lg lg:text-3xl font-semibold bg-gradient-to-r from-emerald-700 to-emerald-100">
+              <p>Discussion Forums</p>
             </div>
           </div>
-          <div className="w-1/4 p-5  box-content active:border-2 active:rounded-md active:border-teal-800 	">
-            <div className="h-72 border rounded-md flex justify-center items-center text-center text-2xl font-semibold bg-gradient-to-r from-emerald-700  to-emerald-100">
+          <div className="w-full sm:w-1/2 md:w-1/3 p-3 sm:p-4 md:p-5 box-content active:border-2 active:rounded-md active:border-teal-800">
+            <div className="h-40 sm:h-48 md:h-56 lg:h-72 md:px-2  border rounded-md flex justify-center items-center text-center text-lg sm:text-xl md:text-lg lg:text-3xl font-semibold bg-gradient-to-r from-emerald-700 to-emerald-100">
               <p>One-on-One Chats</p>
             </div>
           </div>
         </div>
-        
       </div>
       <div className=" flex justify-center mx-auto">
-              <span>Load More</span>
-              <svg
-                width="25"
-                height="24"
-                viewBox="0 0 25 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="self-end"
-              >
-                <path
-                  d="M4.5159 7.96967C4.78493 7.7034 5.20592 7.6792 5.50259 7.89705L5.58758 7.96967L12.1245 14.439L18.6614 7.96967C18.9304 7.7034 19.3514 7.6792 19.648 7.89705L19.733 7.96967C20.0021 8.23594 20.0265 8.6526 19.8064 8.94621L19.733 9.03033L12.6603 16.0303C12.3913 16.2966 11.9703 16.3208 11.6736 16.1029L11.5886 16.0303L4.5159 9.03033C4.21996 8.73744 4.21996 8.26256 4.5159 7.96967Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
+        <span>Load More</span>
+        <svg
+          width="25"
+          height="24"
+          viewBox="0 0 25 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="self-end"
+        >
+          <path
+            d="M4.5159 7.96967C4.78493 7.7034 5.20592 7.6792 5.50259 7.89705L5.58758 7.96967L12.1245 14.439L18.6614 7.96967C18.9304 7.7034 19.3514 7.6792 19.648 7.89705L19.733 7.96967C20.0021 8.23594 20.0265 8.6526 19.8064 8.94621L19.733 9.03033L12.6603 16.0303C12.3913 16.2966 11.9703 16.3208 11.6736 16.1029L11.5886 16.0303L4.5159 9.03033C4.21996 8.73744 4.21996 8.26256 4.5159 7.96967Z"
+            fill="black"
+          />
+        </svg>
+      </div>
     </div>
   );
 };

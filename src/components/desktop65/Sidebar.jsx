@@ -6,7 +6,7 @@ const Sidebar = ({isSidebarOpen}) => {
     <div className="relative ">
       <aside
         id="default-sidebar"
-        className={`absolute top-0 left-0 h-screen md:w-64 transition-transform ${
+        className={`absolute z-40 top-0 left-0 h-screen md:w-64 transition-transform ${
           isSidebarOpen ? "translate-x-0 " : "-translate-x-full  "
         } md:translate-x-0 duration-300 ease-in-out`}
         aria-label="Sidebar"

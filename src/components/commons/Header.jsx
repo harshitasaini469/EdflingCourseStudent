@@ -1,26 +1,29 @@
 import React from "react";
 import "../../assets/Header.css";
 import { useState } from "react";
-import { Menu,  } from "lucide-react";
-const Header = () => {
+import { Menu  } from "lucide-react";
+import { connect } from 'react-redux';
+import { openSidebar, closeSidebar } from '../../redux/actions/sidebarActions.js'
+const Header = ({ isSidebarOpen, openSidebar, closeSidebar }) => {
   const [act, setAct] = useState("Home");
 
-  const [isopen, setOpen] = useState("false");
-  const togglenavbar = () => {
-    setOpen(!isopen);
-    console.log(isopen);
+  const toggleSidebar = () => {
+    if (isSidebarOpen) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
   };
-
   let login = true;
 
   return (
     <>
-<div className="navbar  sm:px-5 sticky top-0 w-full items-center justify-between pt-2 flex flex-wrap bg-white shadow-md font-poppins md:text-sm lg:text-lg">
+<div className="navbar  sm:px-5  w-full items-center justify-between pt-2 flex flex-wrap bg-white shadow-md font-poppins md:text-sm lg:text-lg">
         {/* left portion of navbar  */}
         <div className="left w-auto md:w-1/5 flex items-center px-2 ">
           {/* for screen smaller than 768px */}
           <div className="flex flex-col md:hidden">
-            <button onClick={togglenavbar} className="">
+            <button onClick={toggleSidebar} className="">
               {<Menu />}
             </button>
           </div>
@@ -174,88 +177,18 @@ const Header = () => {
           </div>
         )}
 
-        {!isopen && (
-          <div className="center w-2/4 flex md:hidden basis-full">
-            <ul className="nav-list flex flex-col justify-between items-center  w-full ">
-              <li
-                className="list-item hover:cursor-pointer opacity-50 font-normal"
-                onClick={() => {
-                  setAct((act) => "Home");
-                }}
-                style={{
-                  color: act === "Home" ? "#215D4F" : "",
-                  opacity: act === "Home" ? "1" : "",
-                  fontWeight: act === "Home" ? "500" : "",
-                }}
-              >
-                Home
-              </li>
-              <li
-                className="list-item hover:cursor-pointer opacity-50 font-normal"
-                onClick={() => {
-                  setAct((act) => "Why us");
-                }}
-                style={{
-                  color: act === "Why us" ? "#215D4F" : "",
-                  opacity: act === "Why us" ? "1" : "",
-                  fontWeight: act === "Why us" ? "500" : "",
-                }}
-              >
-                Why us
-              </li>
-              <li
-                className="list-item hover:cursor-pointer opacity-50 font-normal"
-                onClick={() => {
-                  setAct((act) => "Courses");
-                }}
-                style={{
-                  color: act === "Courses" ? "#215D4F" : "",
-                  opacity: act === "Courses" ? "1" : "",
-                  fontWeight: act === "Courses" ? "500" : "",
-                }}
-              >
-                Courses
-              </li>
-              <li
-                className="list-item hover:cursor-pointer opacity-50 font-normal"
-                onClick={() => {
-                  setAct((act) => "Mentors");
-                }}
-                style={{
-                  color: act === "Mentors" ? "#215D4F" : "",
-                  opacity: act === "Mentors" ? "1" : "",
-                  fontWeight: act === "Mentors" ? "500" : "",
-                }}
-              >
-                Mentors
-              </li>
-              <li
-                className="list-item hover:cursor-pointer opacity-50 font-normal"
-                onClick={() => {
-                  setAct((act) => "Contact us");
-                }}
-                style={{
-                  color: act === "Contact us" ? "#215D4F" : "",
-                  opacity: act === "Contact us" ? "1" : "",
-                  fontWeight: act === "Contact us" ? "500" : "",
-                }}
-              >
-                Contact us
-              </li>
-
-              {login && (
-                <>
-                  <button className="signup py-1 px-3.5 ml-0 my-1">
-                    Logout
-                  </button>
-                </>
-              )}
-            </ul>
-          </div>
-        )}
+        
       </div>
     </>
   );
 };
+const mapStateToProps = (state) => ({
+  isSidebarOpen: state.sidebar.isSidebarOpen,
+});
 
-export default Header;
+const mapDispatchToProps = {
+  openSidebar,
+  closeSidebar,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

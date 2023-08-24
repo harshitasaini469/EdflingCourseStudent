@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 const GroupChat = () => {
   const [messages, setMessages] = useState([]);
-  const[message,setMessage]=useState('')
-  const currentUser = "member"; // You can change this to 'member' for testing member messages
+  const [message, setMessage] = useState("");
+  const currentUser = "admin"; // You can change this to 'member' for testing member messages
 
   const getRandomColorClass = () => {
     const colorClasses = [
@@ -22,25 +22,24 @@ const GroupChat = () => {
   };
 
   const sendMessage = (text) => {
-    if (message.trim() !== '') {
-        const newMessage = {
-          text: message,
-          sender: currentUser,
-        };
-        setMessages([...messages, newMessage]);
-        setMessage('');
-      }
+    if (message.trim() !== "") {
+      const newMessage = {
+        text: message,
+        sender: currentUser,
+      };
+      setMessages([...messages, newMessage]);
+      setMessage("");
+    }
   };
 
   return (
-    <div className="font-poppins p-5  ">
-    
-      <div className="border rounded-lg border-2 border-gray text-4xl text-gray-500 p-3 w-1/3 text-center">
+    <div className="font-poppins p-2 md:p-5  ">
+      <div className="border rounded-lg border-2 border-gray text-2xl md:text-3xl lg:text-4xl text-gray-500 p-3 w-fit text-center">
         Group Chat
       </div>
       <div className="flex flex-col mt-4 h-screen rounded-lg border-1 border-teal-800  shadow-md p-3">
-        <div className="flex-grow rounded-lg p-4">
-          <div className="flex flex-col gap-2">
+        <div className="flex-grow rounded-lg p-2 md:p-4">
+          <div className="flex flex-col gap-2 space-y-3">
             {messages.map((message, index) => (
               <div
                 key={index}
@@ -48,14 +47,14 @@ const GroupChat = () => {
                   message.sender === "admin"
                     ? "self-end flex flex-row"
                     : "self-start flex flex-row-reverse"
-                }`}
+                } `}
               >
                 <div
                   className={`${
                     message.sender === "admin"
-                      ? "bg-teal-800 rounded-tl-xl rounded-bl-xl rounded-br-xl text-white mr-2"
-                      : "bg-gray-300 rounded-tr-xl rounded-tl-xl rounded-br-xl text-black ml-2"
-                  } p-2 px-5`}
+                      ? "bg-teal-800 rounded-tl-xl rounded-bl-xl rounded-br-xl text-white mr-1"
+                      : "bg-gray-300 rounded-tr-xl rounded-tl-xl rounded-br-xl text-black ml-1"
+                  } p-2 px-5 text-sm md:text-base`}
                 >
                   {message.text}
                 </div>
@@ -64,7 +63,7 @@ const GroupChat = () => {
                     message.sender === "admin"
                       ? "bg-teal-800"
                       : `${getRandomColorClass()} mt-2`
-                  } rounded-md text-white text-sm py-1 w-12 text-center h-7`}
+                  } rounded-xl text-white text-xs md:text-sm py-1 w-9 h-7  text-center md:w-12 md:h-7 `}
                 >
                   {message.sender === "admin" ? "Own" : "M"}
                 </div>
@@ -76,18 +75,16 @@ const GroupChat = () => {
           <input
             type="text"
             placeholder="Type your message..."
-            className=" p-2 w-full outline-none "
+            className=" p-2 w-full outline-none text-xs sm:text-sm "
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 sendMessage(e.target.value);
                 e.target.value = "";
-            
               }
             }}
             name="message"
             value={message}
-            onChange={(e)=>setMessage(e.target.value)}
-        
+            onChange={(e) => setMessage(e.target.value)}
           />
           <svg
             width="24"
