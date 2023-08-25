@@ -2,7 +2,7 @@ import React from 'react'
 
 const TutoringHours = () => {
   return (
-    <div className="bg-teal-800 p-4 rounded-md space-y-3 text-lg w-fit flex flex-col ">
+    <div className="bg-teal-800 px-4 py-4 rounded-md space-y-2 text-lg w-72 flex flex-col ">
     <p>Tutoring Hours</p>
     <div className="flex">
       <p>214</p>

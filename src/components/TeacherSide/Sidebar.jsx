@@ -80,11 +80,11 @@ const Sidebar = ({ isSidebarOpen }) => {
               {isDropdownOpen && (
                 <div className="transition duration-75">
                   <ul className="space-y-2  ml-4 text-white text-sm">
-                    <li>Create a new course</li>
-                    <li>Manage your courses</li>
-                    <li>Course pricing</li>
-                    <li>Course Enrollment</li>
-                    <li>Chats</li>
+                    <li className="space-x-2"><span className="">&gt;</span><span>Create a new course</span></li>
+                    <li className="space-x-2"><span>&gt;</span><span>Manage your courses</span></li>
+                    <li className="space-x-2"><span>&gt;</span><span>Course pricing</span></li>
+                    <li className="space-x-2"><span>&gt;</span><span>Course Enrollment</span></li>
+                    <li className="space-x-2"><span>&gt;</span><span>Chats</span></li>
                   </ul>
                 </div>
               )}
