@@ -45,7 +45,7 @@ const Footer = () => {
           Success is here!!!
         </p>
       </div>
-      <div className="flex sm:flex-row sm:flex-wrap flex-col gap-y-8 sm:gap-x-12 px-3  text-center  justify-center items-center">
+      <div className="flex sm:flex-row sm:flex-wrap flex-col gap-y-5 sm:gap-x-12 px-3  text-center  justify-center items-center">
         <FooterContent
           content={[
             "About",

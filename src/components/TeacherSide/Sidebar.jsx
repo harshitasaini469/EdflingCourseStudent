@@ -83,7 +83,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                     <li>Create a new course</li>
                     <li>Manage your courses</li>
                     <li>Course pricing</li>
-                    <li>  Course Enrollment</li>
+                    <li>Course Enrollment</li>
                     <li>Chats</li>
                   </ul>
                 </div>

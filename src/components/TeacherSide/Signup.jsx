@@ -47,7 +47,7 @@ const Signup = () => {
               />
               <label htmlFor="terms" className="text-xs sm:text-sm ">
                 By signing up for edfling course ,you agree to our{" "}
-                <span className="text-indigo-800 underline">Terms of use</span>
+                <span className="text-indigo-800 underline m-1">Terms of use</span>
                 and{" "}
                 <span className="text-indigo-800 underline">
                   Privacy Policy

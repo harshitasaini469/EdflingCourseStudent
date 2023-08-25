@@ -19,7 +19,7 @@ const Page66 = ({ isSidebarOpen }) => {
           image={"./desktop66/bookmark.png"}
         />
         <Pagination />
-        <div className="space-y-10 ">
+        <div className="space-y-10 py-3 ">
           <Problem />
           <Problem />
           <Problem />

@@ -2,7 +2,7 @@ import React from "react";
 const Page65Card = () =>{
     return(
 
-        <div className=" flex flex-column justify-items-center items-center w-80 h-80 rounded-2xl border-orange-200 border-2 ">
+        <div className=" flex flex-column justify-items-center items-center w-80 h-80 rounded-2xl border-orange-200 border-2  ">
             <div className="self-start bg-orange-400 rounded-r-2xl  relative top-5 w-32 h-8 pt-2 pl-7 pb-2 pr-7">
                 <h3 className="text-white text-sm font-semibold font-poppins non-italic">Full-Time</h3>
             </div>

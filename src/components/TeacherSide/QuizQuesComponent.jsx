@@ -29,7 +29,7 @@ const QuizQuesComponent = (props) => {
             <div className="border-1 border-black border-dashed"></div>
         </div>
       </div>
-      <div className="mt-2 border-1 border-teal-800 rounded-3xl w-fit p-2">
+      <div className="mt-2 border-1 border-teal-800 rounded-xl w-fit p-2">
         <label className="mr-2">No. of options:</label>
         <select
           className="px-2 py-1 outline-none"
@@ -43,10 +43,10 @@ const QuizQuesComponent = (props) => {
           ))}
         </select>
       </div>
-      <div className="mt-2 flex flex-row flex-wrap justify-between">
+      <div className="mt-2 flex flex-col sm:flex-row sm:flex-wrap justify-between">
         {options.map((option, index) => (
-          <div key={index} className="mt-2 w-1/2 pr-2">
-            <div className="w-1/3 border-1 border-teal-800 rounded-2xl flex items-center px-3 py-1">
+          <div key={index} className="mt-2 sm:w-1/2 pr-2">
+            <div className=" border-1 w-44 border-teal-800 rounded-xl flex items-center px-3 py-1">
               {String.fromCharCode(65 + index)}. {/* Convert index to alphabet */}
               <input
                 type="text"

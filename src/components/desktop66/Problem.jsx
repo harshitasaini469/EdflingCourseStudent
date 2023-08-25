@@ -6,7 +6,7 @@ const Problem = () => {
       <div className="absolute z-20 ml-5 bg-orange-400 w-fit text-white font-medium p-2 rounded-xl top-0">
         <p>Problem</p>
       </div>
-      <div className="relative z-10 top-6 flex flex-col sm:flex-row gap-2 justify-between sm:items-center w-full border-2 px-3 py-3 sm:px-4 sm:py-4 border-orange-400 rounded-md">
+      <div className="relative z-10 top-6 flex flex-col sm:flex-row gap-2 justify-between sm:items-center w-full border-2 px-3 py-4  border-orange-400 rounded-md">
         <div className="text-teal-800 font-medium">
           <p>How to make Poster?</p>
           <p className="flex items-center gap-2">
