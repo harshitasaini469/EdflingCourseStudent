@@ -14,7 +14,6 @@ const GroupChat = () => {
       "bg-indigo-500",
       "bg-purple-500",
       "bg-pink-500",
-      // Add more color classes here
     ];
 
     const randomIndex = Math.floor(Math.random() * colorClasses.length);

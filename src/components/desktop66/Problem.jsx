@@ -11,7 +11,9 @@ const Problem = () => {
           <p>How to make Poster?</p>
           <p className="flex items-center gap-2">
             <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-            <span className="text-xs font-regular">Last attempted on 24 March 2020</span>
+            <span className="text-xs font-regular">
+              Last attempted on 24 March 2020
+            </span>
           </p>
           <p>
             Marks : <span className="text-orange-400">400/400 </span>

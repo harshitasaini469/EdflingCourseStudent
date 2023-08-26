@@ -25,11 +25,11 @@ function App() {
           <Route exact path="/63" element={<Page6364 />}></Route>
         </Routes>
       </Router> */}
-      {/* <Page65/> */}
-      {/* <Page66/> */}
-        <TeacherSide />
+        {/* <Page65/> */}
+        <Page66 />
+        {/* <TeacherSide /> */}
         {/* <Signup /> */}
-        <Footer/>
+        <Footer />
         {/* <FormSubmittedSuccessfully/> */}
       </div>
     </Provider>
