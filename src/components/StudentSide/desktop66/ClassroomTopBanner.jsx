@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../assets/classroomTopBanner.css'
+import '../../../assets/classroomTopBanner.css'
 
 const ClassroomTopBanner = ({ heading, description, image }) => {
   return (

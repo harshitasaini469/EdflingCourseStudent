@@ -1,5 +1,5 @@
 import React from "react";
-import AskDoubtPage from "../components/desktop6364/AskDoubtPage";
+import AskDoubtPage from "../components/StudentSide/desktop6364/AskDoubtPage";
 
 
 const Page6364 = () => {

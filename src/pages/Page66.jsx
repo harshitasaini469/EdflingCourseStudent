@@ -1,8 +1,8 @@
 import React from "react";
-import ClassroomTopBanner from "../components/desktop66/ClassroomTopBanner";
-import Sidebar from "../components/desktop66/Sidebar";
-import Pagination from "../components/desktop66/Pagination";
-import Problem from "../components/desktop66/Problem";
+import ClassroomTopBanner from "../components/StudentSide/desktop66/ClassroomTopBanner";
+import Sidebar from "../components/StudentSide/desktop66/Sidebar";
+import Pagination from "../components/StudentSide/desktop66/Pagination";
+import Problem from "../components/StudentSide/desktop66/Problem";
 import { connect } from "react-redux";
 
 const Page66 = ({ isSidebarOpen }) => {

@@ -2,7 +2,8 @@ import React from "react";
 
 const FormSubmittedSuccessfully = () => {
   return (
-    <div className="border w-9/12 sm:w-7/12 md:w-6/12 lg:w-4/12 p-5 mx-auto bg-blue-50 rounded-lg mt-5">
+    <div className="p-5">
+       <div className="border w-9/12 sm:w-7/12 md:w-6/12 lg:w-4/12 p-5 mx-auto bg-blue-50 rounded-lg mt-5">
       <div className="font-poppins space-y-5 flex flex-col justify-center items-center font-sm text-center ">
         <div className="flex flex-col items-center">
           <svg
@@ -113,6 +114,8 @@ const FormSubmittedSuccessfully = () => {
         <button className="border-2 border-teal-800 text-teal-800 rounded-md p-2">Go back to home</button>
       </div>
     </div>
+    </div>
+   
   );
 };
 

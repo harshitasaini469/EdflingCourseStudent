@@ -1,11 +1,11 @@
 import React from 'react'
 import Sidebar from "./Sidebar";
 import CoursesNav from "./CoursesNav";
-import EmbeddedVideo from "./EmbeddedVideo";
 import Transcript from "./Transcript";
 import LikeDislikeComment from "./LikeDislikeComment";
 import Comments from "./Comments";
 import { connect } from 'react-redux';
+import EmbeddedVideo from './EmbeddedVideo';
 
 const Courses = ({ isSidebarOpen }) => {
   return (

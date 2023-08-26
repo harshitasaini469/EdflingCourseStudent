@@ -1,11 +1,11 @@
 import React from "react";
-import Sidebar from "../components/desktop65/Sidebar";
-import ClassroomTopBanner from "../components/desktop65/ClassroomTopBanner";
-import PlacementStats from "../components/desktop65/PlacementStats";
-import Page65Card from "../components/desktop65/Page65Card";
-import ExploreMore from "../components/desktop65/ExploreMore";
+import Sidebar from "../components/StudentSide/desktop65/Sidebar";
+import PlacementStats from "../components/StudentSide/desktop65/PlacementStats";
+import Page65Card from "../components/StudentSide/desktop65/Page65Card";
+import ExploreMore from "../components/StudentSide/desktop65/ExploreMore";
 import { connect } from "react-redux";
-import Separator from "../components/desktop65/Separator";
+import Separator from "../components/StudentSide/desktop65/Separator";
+import ClassroomTopBanner from "../components/StudentSide/desktop65/ClassroomTopBanner";
 
 const Page65 = ({ isSidebarOpen }) => {
   let heading = "Placed Edflinger";

@@ -12,7 +12,6 @@ import CreateQuiz from "../components/TeacherSide/CreateQuiz";
 import Analytics from "../components/TeacherSide/Analytics";
 import UpdateCoursePage from "../components/TeacherSide/UpdateCoursePage";
 import LogOut from "../components/TeacherSide/LogOut";
-import Signup from "../components/TeacherSide/Signup";
 import { connect } from "react-redux";
 
 const TeacherSide = ({ isSidebarOpen }) => {
@@ -24,20 +23,18 @@ const TeacherSide = ({ isSidebarOpen }) => {
           <Nav />
         </div>
         <div className="p-4">
-          <Router>
-            <Routes>
-              <Route path="/" element={<Enrollment />} />
-              <Route path="/chats" element={<Chats />} />
-              <Route path="/group-chat" element={<GroupChat />} />
-              <Route path="/create-assign" element={<CreateAssignment />} />
-              <Route path="/assign" element={<Assignment />} />
-              <Route path="/quiz" element={<Quiz />} />
-              <Route path="/create-quiz" element={<CreateQuiz />} />
-              <Route path="/analytics" element={<Analytics />} />
-              <Route path="/update-course" element={<UpdateCoursePage />} />
-              <Route path="/log-out" element={<LogOut />} />
-            </Routes>
-          </Router>
+          <Routes>
+            <Route path="/" element={<Enrollment />} />
+            <Route path="/chats" element={<Chats />} />
+            <Route path="/group-chat" element={<GroupChat />} />
+            <Route path="/create-assign" element={<CreateAssignment />} />
+            <Route path="/assign" element={<Assignment />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/create-quiz" element={<CreateQuiz />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/update-course" element={<UpdateCoursePage />} />
+            <Route path="/log-out" element={<LogOut />} />
+          </Routes>
         </div>
       </div>
     </div>

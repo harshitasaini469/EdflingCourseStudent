@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../assets/classroomTopBanner.css'
+import '../../../assets/classroomTopBanner.css'
 const ClassroomTopBanner = ({ heading, description, image }) => {
   return (
     <div className='banner flex flex-col-reverse sm:flex-row  items-center gap-2 px-5 py-5 justify-between w-full font-poppins'>
