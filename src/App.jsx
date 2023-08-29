@@ -12,13 +12,14 @@ import store from "./redux/store";
 import Page65 from "./pages/Page65";
 import Page66 from "./pages/Page66";
 import Footer from "./components/commons/Footer";
+import AdminSide from "./pages/AdminSide";
 function App() {
   return (
     <Provider store={store}>
       <div className="flex flex-col min-h-screen justify-between">
         <Router>
-          <Header />
-          <Routes>
+          {/* <Header /> */}
+          {/* <Routes>
             <Route exact path="/" element={<Page20 />} />
             <Route exact path="/18" element={<Page18 />} />
             <Route exact path="/57" element={<Page57 />} />
@@ -32,9 +33,13 @@ function App() {
               element={<FormSubmittedSuccessfully />}
             />
             <Route exact path="/teacher/*" element={<TeacherSide />} />
-          </Routes>
-          <Footer />
+          </Routes> */}
+          {/* <TeacherSide/> */}
+          <AdminSide/>
+          {/* <Footer /> */}
+
         </Router>
+
       </div>
     </Provider>
   );

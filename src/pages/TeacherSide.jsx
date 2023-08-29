@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import Sidebar from "../components/TeacherSide/Sidebar";
 import Nav from "../components/TeacherSide/Nav";
 import Chats from "../components/TeacherSide/Chats";
