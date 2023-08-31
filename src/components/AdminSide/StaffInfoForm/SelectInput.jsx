@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 
 const SelectInput = ({ label, options}) => {
     const [selectedOption, setSelectedOption] = useState('');
-  
+    const handleSelectChange = (e) => {
+      setSelectedOption(e.target.value);
+    };
    
   return (
     <div className="flex flex-col relative font-poppins">
@@ -11,7 +13,7 @@ const SelectInput = ({ label, options}) => {
       </label>
       <select
         className="relative z-10 top-3 border-1 border-black px-3 py-2 text-sm  rounded-md "
-        onChange={(e)=>selectedOption(e.target.value)}
+        onChange={handleSelectChange}
         value={selectedOption} 
       >
         <option >{label}</option>

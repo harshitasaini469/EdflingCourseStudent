@@ -110,7 +110,7 @@ const Sidebar = ({ isSidebarOpen,openSidebar, closeSidebar }) => {
         }`}
         onClick={toggleSidebar}
       >
-        <X size={24} />
+        <X size={26} />
       </button>
     </div>
   );

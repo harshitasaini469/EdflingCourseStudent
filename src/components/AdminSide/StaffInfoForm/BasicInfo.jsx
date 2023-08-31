@@ -95,7 +95,6 @@ const BasicInfo = () => {
           placeholder={""}
           required={true}
         />
-
         <SelectInput
           label={"Marital Status"}
           options={[
