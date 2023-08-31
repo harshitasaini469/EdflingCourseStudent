@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import {
   openSidebar,
   closeSidebar,
-} from "../../../redux/actions/sidebarActions.js";
+} from "../../redux/actions/sidebarActions.js";
 
 const Nav = ({ isSidebarOpen, openSidebar, closeSidebar }) => {
   const toggleSidebar = () => {
@@ -17,7 +17,7 @@ const Nav = ({ isSidebarOpen, openSidebar, closeSidebar }) => {
 
   return (
     <div
-      className={`flex flex-wrap justify-around items-center font-poppins mt-3 ${
+      className={`flex flex-wrap space-y-2 justify-around items-center font-poppins mt-3 text-sm sm:text-base ${
         isSidebarOpen ? "" : ""
       }`}
     >

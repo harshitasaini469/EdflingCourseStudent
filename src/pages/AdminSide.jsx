@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Sidebar from "../components/AdminSide/Sidebar";
-import Nav from "../components/AdminSide/HRdesignation/Nav";
+import Nav from "../components/AdminSide/Nav";
 import HRDesignation from "../components/AdminSide/HRdesignation/HRDesignation";
 import { connect } from "react-redux";
 import StaffInfo from "../components/AdminSide/StaffInfoForm/StaffInfo";
@@ -17,8 +17,7 @@ const AdminSide = ({ isSidebarOpen }) => {
     <div>
       <div className="flex">
         <Sidebar isSidebarOpen={isSidebarOpen} />
-
-        <div className="flex flex-col md:ml-64  w-full space-y-5 h-[100vh] overflow-y-scroll no-scrollbar">
+        <div className={`flex flex-col md:ml-64 w-full space-y-5 h-[100vh] overflow-y-scroll no-scrollbar ${isSidebarOpen?'bg-gray-200':''}`}>
           <div className="">
             <Nav />
           </div>

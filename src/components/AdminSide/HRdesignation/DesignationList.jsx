@@ -13,9 +13,9 @@ const DesignationList = ({ data, currentPage, itemsPerPage }) => {
     <div className="w-full border px-3 py-3 shadow-md rounded-lg">
       <ul className="text-sm sm:text-base" >
         {paginatedData.map((designation) => (
-          <li key={designation.id} className="flex gap-2 justify-between px-2 py-2 border-b-2 font-medium">
+          <li key={designation.id} className="flex  justify-between px-2 py-2 border-b-2 font-medium">
             <p>{designation.name}</p>
-            <div className="flex gap-2 sm:gap-5">
+            <div className="flex space-x-3 sm:space-x-7">
             <button>
               <svg
                 className="w-5 h-5"

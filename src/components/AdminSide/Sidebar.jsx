@@ -1,6 +1,18 @@
 import React, { useState } from "react";
 import {X} from 'lucide-react'
-const Sidebar = ({ isSidebarOpen }) => {
+import { connect } from "react-redux";
+import {
+  openSidebar,
+  closeSidebar,
+} from "../../redux/actions/sidebarActions.js";
+const Sidebar = ({ isSidebarOpen,openSidebar, closeSidebar }) => {
+  const toggleSidebar = () => {
+    if (isSidebarOpen) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  };
   const sidebarData = [
     {
       item: "Dasboard",
@@ -59,12 +71,12 @@ const Sidebar = ({ isSidebarOpen }) => {
     <div className="relative  ">
       <aside
         id="default-sidebar"
-        className={`absolute z-40 top-0 left-0 h-screen md:w-64 transition-transform ${
+        className={`absolute z-40 top-0 left-0 h-screen w-fit  md:w-64  transition-transform ${
           isSidebarOpen ? "translate-x-0 " : "-translate-x-full  "
         } md:translate-x-0 duration-300 ease-in-out`}
         aria-label="Sidebar"
       >
-        <div class="h-full flex flex-col justify-between overflow-y-auto no-scrollbar bg-teal-900 text-sm font-poppins">
+        <div class="h-full flex flex-col px-4 justify-between overflow-y-auto no-scrollbar bg-teal-900 text-sm font-poppins">
           <div>
             <div className="w-32 h-20 relative px-3 py-4">
               <img src="/desktop6364/Ellipse.png" alt="" />
@@ -87,11 +99,30 @@ const Sidebar = ({ isSidebarOpen }) => {
                 </li>
               ))}
             </ul>
+        
           </div>
         </div>
       </aside>
+      <button
+        className={`w-fit fixed z-50 p-2  ml-60   ${
+          isSidebarOpen ? "block" : "hidden"
+        }  
+        }`}
+        onClick={toggleSidebar}
+      >
+        <X size={24} />
+      </button>
     </div>
   );
 };
 
-export default Sidebar;
+const mapStateToProps = (state) => ({
+  isSidebarOpen: state.sidebar.isSidebarOpen,
+});
+
+const mapDispatchToProps = {
+  openSidebar,
+  closeSidebar,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
