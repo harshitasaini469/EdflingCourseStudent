@@ -3,9 +3,9 @@ import SelectInput from "../StaffInfoForm/SelectInput";
 import TextInput from "../StaffInfoForm/TextInput";
 const SelectCriteria = () => {
   return (
-    <div className="border-2 border-gray-300 rounded-lg justify-center gap-3 flex flex-col px-4 h-fit py-2  font-poppins mt-4 text-sm sm:text-base">
-      <p className="text-lg text-gray-500">Select Criteria</p>
-      <div className="sm:grid flex flex-col  sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-500">
+    <div className="border-2 border-gray-300 rounded-lg justify-center gap-3 flex flex-col px-4 py-2 h-fit font-poppins mt-4 text-sm sm:text-base">
+      <p className=" text-gray-500">Select Criteria</p>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-500">
         <SelectInput
           label={"Role"}
           options={[
@@ -14,21 +14,8 @@ const SelectCriteria = () => {
             { value: "option3", label: "Option 3" },
           ]}
         />
-        <TextInput
-          type={"text"}
-          field={"Search By Staff ID"}
-          placeholder={""}
-          required={true}
-        />
-        <TextInput
-          type={"text"}
-          field={"Search By Name"}
-          placeholder={""}
-          required={true}
-        />
       </div>
       <button className="flex items-center ms-auto mr-3 mt-3 bg-gray-200 w-fit rounded-lg px-3 py-1">
-        {" "}
         <svg
           className="w-5 h-5"
           viewBox="0 0 30 30"

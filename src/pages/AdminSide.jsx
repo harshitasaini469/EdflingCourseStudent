@@ -6,6 +6,11 @@ import HRDesignation from "../components/AdminSide/HRdesignation/HRDesignation";
 import { connect } from "react-redux";
 import StaffInfo from "../components/AdminSide/StaffInfoForm/StaffInfo";
 import StaffDirectory from "../components/AdminSide/StaffDirectory/StaffDirectory";
+import StaffAttendance from "../components/AdminSide/StaffAttendance/StaffAttendance";
+import Payroll from "../components/AdminSide/payroll/Payroll";
+import StaffLeave from "../components/AdminSide/Staffleave/StaffLeave";
+import RolePermission from "../components/AdminSide/RolePermission/RolePermission";
+import StaffSetting from "../components/AdminSide/StaffSetting/StaffSetting";
 
 const AdminSide = ({ isSidebarOpen }) => {
   return (
@@ -22,6 +27,16 @@ const AdminSide = ({ isSidebarOpen }) => {
               <Route path="/" element={<HRDesignation />} />
               <Route path="/staff-info" element={<StaffInfo/>}/>
               <Route path="/staff-directory" element={<StaffDirectory/>}/>
+              <Route path="/staff-attendance" element={<StaffAttendance/>}/>
+              <Route path="/payroll" element={<Payroll/>}/>
+              <Route path="/staff-leave" element={<StaffLeave/>}/>
+              <Route path="/role-permission" element={<RolePermission/>}/>
+              <Route path="/staff-setting" element={<StaffSetting/>}/>
+
+
+
+
+
 
             </Routes>
           </div>

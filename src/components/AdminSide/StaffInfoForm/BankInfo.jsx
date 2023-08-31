@@ -5,7 +5,7 @@ const BankInfo = () => {
   return (
     <div className='mt-5 font-poppins'>
       <p className='font-medium mb-2'>Bank Info Details</p>
-      <div className='grid grid-cols-4 gap-3'>
+      <div className='flex flex-col sm:grid sm:grid-cols-3 lg:grid-cols-4 gap-3'>
       <TextInput
         type={"text"}
         field={"Bank Account Name"}

@@ -5,8 +5,7 @@ const FileOperations = () => {
     <div className="flex gap-4 pe-3 justify-end">
       <button>
         <svg
-          width="20"
-          height="25"
+          className="w-5 h-5 sm:w-7 sm:h-7"
           viewBox="0 0 20 25"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -20,8 +19,7 @@ const FileOperations = () => {
       </button>
       <button>
         <svg
-          width="21"
-          height="25"
+          className="w-5 h-5 sm:w-7 sm:h-7"
           viewBox="0 0 21 25"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -35,8 +33,7 @@ const FileOperations = () => {
       </button>
       <button>
         <svg
-          width="22"
-          height="27"
+          className="w-5 h-5 sm:w-7 sm:h-7"
           viewBox="0 0 22 27"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -55,8 +52,7 @@ const FileOperations = () => {
       </button>
       <button>
         <svg
-          width="20"
-          height="27"
+          className="w-5 h-5 sm:w-7 sm:h-7"
           viewBox="0 0 20 27"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +66,7 @@ const FileOperations = () => {
       </button>
       <button>
         <svg
-          width="27"
-          height="25"
+          className="w-5 h-5 sm:w-7 sm:h-7"
           viewBox="0 0 27 25"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

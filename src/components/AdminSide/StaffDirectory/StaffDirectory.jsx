@@ -7,15 +7,14 @@ const StaffDirectory = () => {
 
   return (
     <div className="">
-      <button className="rounded-md p-2 bg-gradient-to-r from-teal-800 to-teal-100 font-medium">
+      <button className="rounded-md p-2 bg-gradient-to-r text-sm sm:text-base from-teal-600 to-teal-100 font-medium">
         Staff Directory
       </button>
       <SelectCriteria />
       <div className="flex items-center justify-between mt-5 font-poppins text-lg">
         <div className="flex items-center gap-1">
           <svg
-            width="23"
-            height="23"
+            className="w-5 h-5 sm:w-7 sm:h-7"
             viewBox="0 0 23 23"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +51,7 @@ const StaffDirectory = () => {
             </g>
           </svg>
 
-          <span className="text-gray-500">List</span>
+          <span className="text-gray-500 text-sm sm:text-base">List</span>
         </div>
         <FileOperations />
       </div>

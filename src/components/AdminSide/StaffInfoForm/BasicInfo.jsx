@@ -6,7 +6,7 @@ const BasicInfo = () => {
   return (
     <div>
       <p className="font-medium text-lg font-poppins mb-3">Basic Info</p>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="flex flex-col  sm:grid  sm:grid-cols-3 lg:grid-cols-4 gap-4">
         <TextInput
           type={"text"}
           field={"Staff No."}
@@ -119,7 +119,7 @@ const BasicInfo = () => {
         />
       </div>
       <div>
-      <div className="flex flex-col relative font-poppins w-1/3 mt-5">
+      <div className="flex flex-col relative font-poppins sm:w-1/3 mt-5">
         <label
           htmlFor="staff-photo"
           className="absolute z-20 top-0 bg-white px-1 text-sm ml-4 "
@@ -137,7 +137,7 @@ const BasicInfo = () => {
       </div>
      
       
-      <div className="grid grid-cols-2 gap-3 mt-5">
+      <div className="flex flex-col sm:grid sm:grid-cols-2 gap-3 mt-5">
       <TextInput
         type={"text"}
         field={"Current Address"}

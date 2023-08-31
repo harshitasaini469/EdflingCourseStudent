@@ -7,12 +7,12 @@ import DocumentInfo from './DocumentInfo';
 
 const StaffInfo = () => {
   return (
-    <div className='font-poppins'>
+    <div className='font-poppins text-sm sm:text-base'>
       <div className='flex justify-between mb-3'>
         <button className='rounded-md p-2 bg-gradient-to-r from-teal-800 to-teal-100 font-medium'>Add New Staff</button>
         <button className='rounded-md bg-teal-800 text-white p-2 font-medium'>Import Staff</button>
       </div>
-      <p className='font-medium text-center text-lg  mb-3'>Staff Information</p>
+      <p className='font-medium text-center text-lg  mb-3 '>Staff Information</p>
       <div>
       <BasicInfo/>
       <Payroll/>

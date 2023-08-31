@@ -10,13 +10,13 @@ const SelectInput = ({ label, options}) => {
         {label}
       </label>
       <select
-        className="relative z-10 top-3 border-1 border-black px-3 py-2 text-sm  rounded-md"
+        className="relative z-10 top-3 border-1 border-black px-3 py-2 text-sm  rounded-md "
         onChange={(e)=>selectedOption(e.target.value)}
         value={selectedOption} 
       >
-        <option></option>
+        <option >{label}</option>
         {options.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option key={option.value} value={option.value} >
             {option.label}
           </option>
         ))}
