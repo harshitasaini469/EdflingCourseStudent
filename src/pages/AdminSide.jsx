@@ -31,12 +31,6 @@ const AdminSide = ({ isSidebarOpen }) => {
               <Route path="/staff-leave" element={<StaffLeave/>}/>
               <Route path="/role-permission" element={<RolePermission/>}/>
               <Route path="/staff-setting" element={<StaffSetting/>}/>
-
-
-
-
-
-
             </Routes>
           </div>
         </div>

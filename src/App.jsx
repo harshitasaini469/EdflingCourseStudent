@@ -18,8 +18,8 @@ function App() {
     <Provider store={store}>
       <div className="flex flex-col min-h-screen justify-between">
         <Router>
-          {/* <Header /> */}
-          {/* <Routes>
+          <Header />
+          <Routes>
             <Route exact path="/" element={<Page20 />} />
             <Route exact path="/18" element={<Page18 />} />
             <Route exact path="/57" element={<Page57 />} />
@@ -33,13 +33,11 @@ function App() {
               element={<FormSubmittedSuccessfully />}
             />
             <Route exact path="/teacher/*" element={<TeacherSide />} />
-          </Routes> */}
-          {/* <TeacherSide/> */}
-          <AdminSide/>
-          {/* <Footer /> */}
-
+            <Route exact path="/admin/*" element={<AdminSide/>} />
+          </Routes>
+          <Footer />
+          {/* <AdminSide/> */}
         </Router>
-
       </div>
     </Provider>
   );
