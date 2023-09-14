@@ -11,6 +11,10 @@ import Payroll from "../components/AdminSide/payroll/Payroll";
 import StaffLeave from "../components/AdminSide/Staffleave/StaffLeave";
 import RolePermission from "../components/AdminSide/RolePermission/RolePermission";
 import StaffSetting from "../components/AdminSide/StaffSetting/StaffSetting";
+import ContentUploadPage from "../components/AdminSide/ContentUpload/ContentUploadPage";
+import AddLessonPage from "../components/AdminSide/AddLesson/AddLessonPage";
+import LessonPlanPage from "../components/AdminSide/LessonPlanOverview/LessonPlanPage";
+import PlanCreatePage from "../components/PlanCreate/PlanCreatePage";
 
 const AdminSide = ({ isSidebarOpen }) => {
   return (
@@ -31,6 +35,10 @@ const AdminSide = ({ isSidebarOpen }) => {
               <Route path="/staff-leave" element={<StaffLeave/>}/>
               <Route path="/role-permission" element={<RolePermission/>}/>
               <Route path="/staff-setting" element={<StaffSetting/>}/>
+              <Route path="/upload-content" element={<ContentUploadPage/>}/>
+              <Route path="/add-lesson" element={<AddLessonPage/>}/>
+              <Route path="/lesson-plan" element={<LessonPlanPage/>}/>
+              <Route path="/plan-create" element={<PlanCreatePage/>}/>
             </Routes>
           </div>
         </div>
