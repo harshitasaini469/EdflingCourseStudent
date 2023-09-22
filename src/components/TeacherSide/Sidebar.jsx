@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 
 const Sidebar = ({ isSidebarOpen }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [dropdownStates, setDropdownStates] = useState({
+    academicsDropdown: false,
+    courseDropdown: false,
+    chatsDropdown: false,
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    // Add more dropdowns as needed
+  });
+
+  const toggleDropdown = (dropdownName) => {
+    // Create a copy of the dropdownStates object and toggle the specific dropdown
+    setDropdownStates((prevState) => ({
+      prevState: false,
+      [dropdownName]: !prevState[dropdownName],
+    }));
   };
   const lessons = Array.from(
     { length: 10 },
@@ -59,7 +69,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                   class="flex items-center p-2 w-full text-white rounded-lg hover:bg-gray-100/50 transition duration-75 relative "
                   aria-controls="dropdown-example"
                   data-collapse-toggle="dropdown-example"
-                  onClick={toggleDropdown}
+                  onClick={() => toggleDropdown("courseDropdown")}
                 >
                   <svg
                     width="19"
@@ -77,26 +87,26 @@ const Sidebar = ({ isSidebarOpen }) => {
                   <span class="ml-3">Courses</span>
                 </button>
               </li>
-              {isDropdownOpen && (
+              {dropdownStates.courseDropdown && (
                 <div className="transition duration-75">
                   <ul className="space-y-2  ml-4 text-white text-sm">
                     <li className="space-x-2">
                       <span className="">&gt;</span>
                       <span>Create a new course</span>
                     </li>
-                    <li className="space-x-2">
+                    <li className="space-x-2 cursor-pointer">
                       <span>&gt;</span>
                       <span>Manage your courses</span>
                     </li>
-                    <li className="space-x-2">
+                    <li className="space-x-2 cursor-pointer">
                       <span>&gt;</span>
                       <span>Course pricing</span>
                     </li>
-                    <li className="space-x-2">
+                    <li className="space-x-2 cursor-pointer">
                       <span>&gt;</span>
                       <span>Course Enrollment</span>
                     </li>
-                    <li className="space-x-2">
+                    <li className="space-x-2 cursor-pointer">
                       <span>&gt;</span>
                       <span>Chats</span>
                     </li>
@@ -105,9 +115,11 @@ const Sidebar = ({ isSidebarOpen }) => {
               )}
 
               <li>
-                <a
-                  href="#"
-                  class="flex items-center p-2 text-white rounded-lg  hover:bg-gray-100/50"
+                <button
+                  class="flex items-center p-2 w-full text-white rounded-lg hover:bg-gray-100/50 transition duration-75 relative "
+                  aria-controls="dropdown-example"
+                  data-collapse-toggle="dropdown-example"
+                  onClick={() => toggleDropdown("academicsDropdown")}
                 >
                   <svg
                     width="18"
@@ -122,9 +134,31 @@ const Sidebar = ({ isSidebarOpen }) => {
                     />
                   </svg>
 
-                  <span class="flex-1 ml-3 whitespace-nowrap">Academics</span>
-                </a>
+                  <span class="ml-3 whitespace-nowrap">Academic Tests</span>
+                </button>
               </li>
+              {dropdownStates.academicsDropdown && (
+                <div className="transition duration-75">
+                  <ul className="space-y-2  ml-4 text-white text-sm">
+                    <li className="space-x-2">
+                      <span className="">&gt;</span>
+                      <span>Create an Assignment</span>
+                    </li>
+                    <li className="space-x-2 cursor-pointer">
+                      <span>&gt;</span>
+                      <span>Assignments</span>
+                    </li>
+                    <li className="space-x-2 cursor-pointer">
+                      <span>&gt;</span>
+                      <span>Quiz</span>
+                    </li>
+                    <li className="space-x-2 cursor-pointer">
+                      <span>&gt;</span>
+                      <span>Create a Quiz</span>
+                    </li>
+                  </ul>
+                </div>
+              )}
               <li>
                 <a
                   href="#"
@@ -203,6 +237,37 @@ const Sidebar = ({ isSidebarOpen }) => {
                   </span>
                 </a>
               </li>
+              <li>
+                <button
+                  class="flex items-center p-2 w-full text-white rounded-lg hover:bg-gray-100/50 transition duration-75 relative "
+                  aria-controls="dropdown-example"
+                  data-collapse-toggle="dropdown-example"
+                  onClick={() => toggleDropdown("chatsDropdown")}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 512 512"
+                  >
+                    <path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z" fill="white" />
+                  </svg>
+                  <span className="ml-3">Chats</span>
+                </button>
+              </li>
+              {dropdownStates.chatsDropdown && (
+                <div className="transition duration-75">
+                  <ul className="space-y-2  ml-4 text-white text-sm">
+                    <li className="space-x-2 cursor-pointer">
+                      <span className="">&gt;</span>
+                      <span>Teach Chats</span>
+                    </li>
+                    <li className="space-x-2 cursor-pointer">
+                      <span className="">&gt;</span>
+                      <span>Group Chats</span>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </ul>
           </div>
 
